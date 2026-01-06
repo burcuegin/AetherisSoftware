@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz | Aetheris Software</title>
+    <meta name="theme-color" content="#0f0f0f">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Sayfa özelinde çakışmaları önlemek için eklemeler */
+        .services-header {
+            padding: 80px 0 40px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* Dark mode aktifken header rengi */
+        .dark-mode .services-header {
+            background-color: #0f0f0f !important;
+            color: #ffffff;
+        }
+
+        /* Light mode aktifken header rengi */
+        body:not(.dark-mode) .services-header {
+            background-color: #f8f9fa !important;
+            color: #000000;
+        }
+
+        .card {
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .dark-mode .card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="dark-mode"> <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: #0f0f0f;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="./index.html">
+                <i class="fas fa-cube me-2"></i>AETHERIS
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="./index.html">Projeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-3" href="./services.html">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="./about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">İletişim</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round">
+                                    <i class="fas fa-sun sun-icon"></i>
+                                    <i class="fas fa-moon moon-icon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">YAZILIM ÇÖZÜMLERİMİZ</h1>
+            <p class="lead opacity-75">Endüstriyel standartlarda, yüksek performanslı dijital ürünler.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div id="loading" class="text-center d-none">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+
+        <div class="row g-4" id="repo-list">
+            </div>
+    </main>
+
+    <footer class="py-4 mt-auto border-top border-secondary border-opacity-25 text-center text-secondary">
+        <p class="small">&copy; 2026 AETHERIS SOFTWARE LABS.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

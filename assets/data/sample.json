@@ -1,0 +1,23 @@
+[
+  {
+    "name": "PROMPT-OPTIMIZATION-LAB",
+    "description": "Global ölçekli yazılım mimarisi çözümümüz.",
+    "stargazers_count": 120,
+    "forks_count": 45,
+    "image": "https://opengraph.githubassets.com/1/microsoft/prompt-optimization-lab"
+  },
+  {
+    "name": "TYPESCRIPT",
+    "description": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+    "stargazers_count": 95000,
+    "forks_count": 12000,
+    "image": "https://opengraph.githubassets.com/1/microsoft/TypeScript"
+  },
+  {
+    "name": "VSCODE",
+    "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web applications.",
+    "stargazers_count": 150000,
+    "forks_count": 25000,
+    "image": "https://opengraph.githubassets.com/1/microsoft/vscode"
+  }
+]

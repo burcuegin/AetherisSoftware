@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Aetheris Software</title>
+    <meta name="theme-color" content="#0f0f0f">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .contact-header {
+            padding: 80px 0;
+            transition: all 0.3s ease;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 12px;
+            transition: all 0.3s;
+        }
+
+        /* Dark Mode Form Uyumu */
+        .dark-mode .form-control {
+            background-color: #1a1a1a;
+            border-color: #333;
+            color: white;
+        }
+        .dark-mode .form-control:focus {
+            background-color: #252525;
+            border-color: #0d6efd;
+            color: white;
+        }
+
+        .btn-send {
+            background-color: #0d6efd;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover { background-color: #0b5ed7; transform: translateY(-2px); }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .info-card { background-color: #1a1a1a; border: 1px solid #333; }
+        body:not(.dark-mode) .info-card { background-color: #f8f9fa; border: 1px solid #eee; }
+
+        /* Dark Mode Sosyal İkonlar */
+        .dark-mode .social-link { color: #fff !important; }
+        body:not(.dark-mode) .social-link { color: #000 !important; }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: #0f0f0f;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-cube me-2"></i>AETHERIS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link me-3" href="index.html">Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="services.html">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="about.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link active me-3" href="contact.html">İletişim</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round">
+                                    <i class="fas fa-sun sun-icon"></i>
+                                    <i class="fas fa-moon moon-icon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="contact-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-uppercase">Bize Ulaşın</h1>
+            <p class="lead opacity-75">Yeni bir projeye mi başlıyorsunuz? Beraber geliştirelim.</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <h3 class="fw-bold mb-4 text-uppercase" style="font-size: 1.2rem;">Proje Formu</h3>
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small text-uppercase fw-bold">Ad Soyad</label>
+                            <input type="text" class="form-control" placeholder="Adınızı giriniz" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small text-uppercase fw-bold">E-Posta</label>
+                            <input type="email" class="form-control" placeholder="Örn: info@firma.com" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-uppercase fw-bold">Konu</label>
+                        <select class="form-control" required>
+                            <option value="">Bir kategori seçin</option>
+                            <option>Yazılım Geliştirme</option>
+                            <option>API Entegrasyonu</option>
+                            <option>Danışmanlık</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label small text-uppercase fw-bold">Mesajınız</label>
+                        <textarea class="form-control" rows="5" placeholder="Projenizden bahsedin..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Mesajı Gönder</button>
+                </form>
+                <div id="formMessage" class="mt-4"></div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="info-card">
+                    <h3 class="fw-bold mb-4 text-uppercase" style="font-size: 1.2rem;">Ofis Bilgileri</h3>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i>
+                        <p>Aetheris Software Vadisi, No: 102<br>Ar-Ge Merkezi, İstanbul</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-phone me-3 text-primary"></i>
+                        <p>+90 (212) 555 00 00</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-envelope me-3 text-primary"></i>
+                        <p>hello@aetheris.soft</p>
+                    </div>
+                    <hr>
+                    <h4 class="small fw-bold text-uppercase mb-3">Sosyal Ağlar</h4>
+                    <div class="d-flex gap-4">
+                        <a href="https://github.com/microsoft" target="_blank" class="social-link">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/microsoft" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/Microsoft" target="_blank" class="social-link">
+                            <i class="fab fa-x-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 mt-auto border-top border-secondary border-opacity-25 text-center text-secondary">
+        <p class="small">&copy; 2026 Aetheris Software Labs. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageDiv = document.getElementById('formMessage');
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                messageDiv.innerHTML = `<div class="alert alert-danger shadow-sm">Lütfen alanları doldurun.</div>`;
+            } else {
+                messageDiv.innerHTML = `<div class="alert alert-success shadow-sm">Mesajınız gönderildi!</div>`;
+                this.reset();
+                this.classList.remove('was-validated');
+            }
+            this.classList.add('was-validated');
+        }, false);
+    </script>
+</body>
+</html>
