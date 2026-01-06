@@ -6,7 +6,11 @@ Kullanılan API: GitHub REST API (Link: https://docs.github.com/en/rest)
 
 CSS Framework: Bootstrap 5
 
-PWA Özellikleri:
+PWA Özellikleri: Offline Çalışma Desteği: Service Worker altyapısı sayesinde uygulama, internet bağlantısı olmasa bile önceden yüklenen içeriklere erişim sağlar.
+
+Hızlı Yükleme: Statik varlıkların (HTML, CSS, JS, Görseller) önbelleğe alınması sayesinde uygulama, her açılışta sunucuyu beklemeden anında yüklenir.
+
+Kurulabilirlik (Add to Home Screen): Kullanıcılar uygulamayı tarayıcı üzerinden cihazlarının ana ekranına bir mobil uygulama gibi yükleyebilirler.
 
 manifest.json ile kurulabilirlik sağlandı.
 
